@@ -8,7 +8,8 @@ namespace WebApi
 
             builder.Services.AddCors(options =>
             {
-                options.AddDefaultPolicy(
+                // we can use AddDefaultPolicy here instead if we want to apply Cors to all endpoints
+                options.AddPolicy(Constants.StandardCorsPolicyName,
                     policy =>
                     {
                         policy.WithOrigins(new[]
@@ -40,7 +41,6 @@ namespace WebApi
             app.UseCors();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 

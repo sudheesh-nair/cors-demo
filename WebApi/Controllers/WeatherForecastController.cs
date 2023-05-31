@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers
@@ -19,6 +20,7 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
+        [EnableCors(Constants.StandardCorsPolicyName)]
         public IEnumerable<WeatherForecast> Get()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
@@ -32,6 +34,7 @@ namespace WebApi.Controllers
         }
 
         [HttpPut]
+        [EnableCors(Constants.StandardCorsPolicyName)]
         public WeatherForecast Put(int id, [FromBody] string name)
         {
             return new WeatherForecast
@@ -45,6 +48,7 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route("Details")]
+        // note that this endpoint is not enabled with cors
         public IEnumerable<WeatherForecast> GetDetails()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
