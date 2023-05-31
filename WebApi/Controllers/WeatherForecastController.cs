@@ -43,12 +43,11 @@ namespace WebApi.Controllers
 
         [HttpPut("{id}")]
         [EnableCors(Constants.StandardCorsPolicyName)]
-        public WeatherForecast Put(int id, [FromBody] string name)
+        public WeatherForecast Put(int id)
         {
             return new WeatherForecast
             {
                 Id = id,
-                Name = name,
                 TemperatureC = Random.Shared.Next(-20, 55),
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             };
