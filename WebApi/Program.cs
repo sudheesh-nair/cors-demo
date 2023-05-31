@@ -16,6 +16,10 @@ namespace WebApi
                         {
                             "https://mango-ocean-01027a710.3.azurestaticapps.net",
                             "https://witty-meadow-0bbf34210.3.azurestaticapps.net"
+                        })
+                        .WithMethods(new[]
+                        {
+                            "GET", "OPTIONS", "PUT", "POST"
                         });
                     });
             });
