@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<body>
+
+    <div class="text-center">
+        <h1>CORS Test 1</h1>
+    </div>
+
+    <div>
+        <span id='result'></span>
+    </div>
+
+    <ul>
+        <li>
+            <input type="button" value="Values"
+                   onclick="myCorsTest('https://cors-demo-api.azurewebsites.net','/WeatherForecast', 'GET')" />
+        </li>
+        <li>
+            <input type="button" value="PUT test"
+                   onclick="myCorsTest('https://cors-demo-api.azurewebsites.net', '/WeatherForecast/5', 'PUT')" />
+        </li>
+
+        <li>
+            <input type="button" value="GetValues2 [DisableCors]"
+                   onclick="myCorsTest('https://cors-demo-api.azurewebsites.net','/WeatherForecast/Details', 'GET')" />
+        </li>
+    </ul>
+
+    <script src="/js/MyJS.js"></script>
+</body>
+</html>

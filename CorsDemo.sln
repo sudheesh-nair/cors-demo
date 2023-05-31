@@ -5,9 +5,17 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{A6A56BA1-2FBD-421F-B52A-BAE44C30BAE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp1", "WebApp1\WebApp1.csproj", "{5CCB85D7-162F-45E1-A34E-AEB13C331B26}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApp1", "WebApp1", "{A632F07C-7DF5-44AC-BABE-04FEE8654D47}"
+	ProjectSection(SolutionItems) = preProject
+		WebApp1\index.html = WebApp1\index.html
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp2", "WebApp2\WebApp2.csproj", "{77B3DCB9-BE05-40A1-BD04-47C272ED1AAD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApp2", "WebApp2", "{A0C0435F-0DF8-4D6F-98F4-49BF4BC99ABE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{2660250A-8838-4137-A364-6B0CDB8DE5D2}"
+	ProjectSection(SolutionItems) = preProject
+		script.js = script.js
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,17 +27,12 @@ Global
 		{A6A56BA1-2FBD-421F-B52A-BAE44C30BAE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6A56BA1-2FBD-421F-B52A-BAE44C30BAE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6A56BA1-2FBD-421F-B52A-BAE44C30BAE8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5CCB85D7-162F-45E1-A34E-AEB13C331B26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5CCB85D7-162F-45E1-A34E-AEB13C331B26}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5CCB85D7-162F-45E1-A34E-AEB13C331B26}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5CCB85D7-162F-45E1-A34E-AEB13C331B26}.Release|Any CPU.Build.0 = Release|Any CPU
-		{77B3DCB9-BE05-40A1-BD04-47C272ED1AAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{77B3DCB9-BE05-40A1-BD04-47C272ED1AAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{77B3DCB9-BE05-40A1-BD04-47C272ED1AAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{77B3DCB9-BE05-40A1-BD04-47C272ED1AAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2660250A-8838-4137-A364-6B0CDB8DE5D2} = {A632F07C-7DF5-44AC-BABE-04FEE8654D47}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {46B6AD66-D310-4F42-97A5-7ABF56FC934D}
