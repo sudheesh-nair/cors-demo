@@ -33,7 +33,15 @@ namespace WebApi.Controllers
             .ToArray();
         }
 
-        [HttpPut]
+
+        // this is added for the corresponding put call, to enable the preflight request as per cors
+        [HttpOptions("{id}")]
+        public IActionResult PreflightRoute(int id)
+        {
+            return NoContent();
+        }
+
+        [HttpPut("{id}")]
         [EnableCors(Constants.StandardCorsPolicyName)]
         public WeatherForecast Put(int id, [FromBody] string name)
         {
