@@ -6,6 +6,19 @@ namespace WebApi
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                    policy =>
+                    {
+                        policy.WithOrigins(new[]
+                        {
+                            "https://mango-ocean-01027a710.3.azurestaticapps.net",
+                            "https://witty-meadow-0bbf34210.3.azurestaticapps.net"
+                        });
+                    });
+            });
+
             // Add services to the container.
 
             builder.Services.AddControllers();
@@ -23,6 +36,8 @@ namespace WebApi
             }
 
             app.UseHttpsRedirection();
+
+            app.UseCors();
 
             app.UseAuthorization();
 
